@@ -11,7 +11,8 @@ const fredoka = Fredoka({
 
 export const metadata: Metadata = {
   title: "Andy Bello",
-  description: "Andy Bello's Personal Portfolio Website",
+  description:
+    "Andy Bello is a full stack developer keeping up-to-date with emerging technologies. View projects, skills, and get in touch for collaboration opportunities.",
 };
 
 export default function RootLayout({
