@@ -7,7 +7,7 @@ import {
   Planet,
   Rocket,
   Cloud,
-  Navbar,
+  MobileNavbar,
   HeroSection,
   AboutSection,
   SkillsSection,
@@ -19,13 +19,10 @@ import {
 export default function Home() {
   return (
     <Box
+      id="home"
       minH="100vh"
       position="relative"
       overflowX="hidden"
-      bgGradient="to-b"
-      gradientFrom="#1a1a2e"
-      gradientVia="#6b3fa0"
-      gradientTo="#f7fafc"
       style={{
         background: `linear-gradient(
           to bottom,
@@ -93,8 +90,8 @@ export default function Home() {
 
       {/* Venus - yellowish/cream colored */}
       <Planet
-        top="140px"
-        left="75%"
+        top="100px"
+        left="94%"
         size={35}
         gradient="linear-gradient(135deg, #fff8e1 0%, #ffe082 40%, #ffca28 70%, #ffb300 100%)"
         delay={0.3}
@@ -102,7 +99,7 @@ export default function Home() {
 
       {/* Mars - red/rust colored, smaller */}
       <Planet
-        top="420px"
+        top="350px"
         right="8%"
         size={30}
         gradient="linear-gradient(135deg, #d84315 0%, #bf360c 40%, #a1260a 70%, #8b1a08 100%)"
@@ -110,7 +107,11 @@ export default function Home() {
       />
 
       {/* Rocket launching from About section */}
-      <Rocket top="520px" left="45%" delay={1} />
+      <Rocket
+        top={{ base: "850px", md: "700px", lg: "520px" }}
+        left={{ base: "10%", md: "15%", lg: "45%" }}
+        delay={1}
+      />
 
       {/* Clouds appear in sky section (after space) */}
       <Cloud top="1000px" left="3%" scale={1} />
@@ -122,8 +123,8 @@ export default function Home() {
       <Cloud top="2100px" left="2%" scale={1.2} />
       <Cloud top="2300px" right="6%" scale={1} opacity={0.9} />
 
-      {/* Navigation */}
-      <Navbar />
+      {/* Mobile Navbar - only visible on mobile/tablet */}
+      <MobileNavbar />
 
       {/* Hero Section */}
       <HeroSection />

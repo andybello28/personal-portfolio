@@ -47,7 +47,7 @@ export const Footer = () => (
     {/* Dirt layer */}
     <Box
       py="8"
-      px="12"
+      px={{ base: "4", md: "8", lg: "12" }}
       bg="orange.800"
       position="relative"
       _before={{
@@ -88,13 +88,15 @@ export const Footer = () => (
 
       <HStack
         justify="space-between"
+        flexWrap="wrap"
+        gap="4"
         maxW="1000px"
         mx="auto"
         position="relative"
         zIndex="1"
       >
-        <Text fontSize="sm" color="orange.100">
-          © 2024 Andy Bello
+        <Text fontSize={{ base: "xs", lg: "sm" }} color="orange.100">
+          © 2025 Andy Bello
         </Text>
         <HStack gap="4">
           <Link

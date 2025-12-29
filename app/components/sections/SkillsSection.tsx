@@ -26,32 +26,32 @@ const skillCategories = [
 ];
 
 export const SkillsSection = () => (
-  <Box id="skills" py="24" px="12">
-    <VStack gap="12" maxW="1000px" mx="auto">
-      <Heading as="h2" fontSize="4xl" fontWeight="bold" color="gray.800">
+  <Box id="skills" py={{ base: "16", lg: "24" }} px={{ base: "4", md: "8", lg: "12" }}>
+    <VStack gap={{ base: "8", lg: "12" }} maxW="1000px" mx="auto">
+      <Heading as="h2" fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }} fontWeight="bold" color="gray.800">
         Skills
       </Heading>
-      <HStack gap="8" align="flex-start" wrap="wrap" justify="center">
+      <HStack gap={{ base: "4", lg: "8" }} align="flex-start" wrap="wrap" justify="center">
         {skillCategories.map((category) => (
           <VStack
             key={category.title}
-            p="6"
+            p={{ base: "4", lg: "6" }}
             bg="whiteAlpha.800"
             borderRadius="xl"
             backdropFilter="blur(8px)"
-            minW="200px"
+            minW={{ base: "140px", sm: "180px", lg: "200px" }}
             align="flex-start"
             gap="4"
           >
             <HStack>
               <Box w="2" h="2" borderRadius="full" bg={category.color} />
-              <Text fontWeight="semibold" color="gray.800">
+              <Text fontWeight="semibold" color="gray.800" fontSize={{ base: "sm", lg: "md" }}>
                 {category.title}
               </Text>
             </HStack>
             <VStack align="flex-start" gap="2">
               {category.skills.map((skill) => (
-                <Text key={skill} fontSize="sm" color="gray.600">
+                <Text key={skill} fontSize={{ base: "xs", lg: "sm" }} color="gray.600">
                   {skill}
                 </Text>
               ))}

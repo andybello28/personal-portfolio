@@ -3,20 +3,20 @@
 import { Box, Heading, Text, VStack } from "@chakra-ui/react";
 
 export const AboutSection = () => (
-  <Box id="about" py="24" px="12">
+  <Box id="about" py={{ base: "16", lg: "24" }} px={{ base: "4", md: "8", lg: "12" }}>
     <VStack
-      gap="8"
+      gap={{ base: "6", lg: "8" }}
       maxW="800px"
       mx="auto"
       bg="whiteAlpha.800"
-      p="10"
+      p={{ base: "6", md: "8", lg: "10" }}
       borderRadius="2xl"
       backdropFilter="blur(8px)"
     >
-      <Heading as="h2" fontSize="4xl" fontWeight="bold" color="gray.800">
+      <Heading as="h2" fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }} fontWeight="bold" color="gray.800">
         About Me
       </Heading>
-      <Text fontSize="lg" color="gray.600" textAlign="center" lineHeight="tall">
+      <Text fontSize={{ base: "md", lg: "lg" }} color="gray.600" textAlign="center" lineHeight="tall">
         Your about content goes here. Describe your background, skills, and
         what makes you unique.
       </Text>

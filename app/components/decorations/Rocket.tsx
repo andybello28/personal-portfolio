@@ -3,16 +3,18 @@
 import { Box } from "@chakra-ui/react";
 
 interface RocketProps {
-  top: string;
-  left: string;
+  top: string | Record<string, string>;
+  left: string | Record<string, string>;
   delay?: number;
+  display?: string | Record<string, string>;
 }
 
-export const Rocket = ({ top, left, delay = 0 }: RocketProps) => (
+export const Rocket = ({ top, left, delay = 0, display }: RocketProps) => (
   <Box
     position="absolute"
     top={top}
     left={left}
+    display={display}
     pointerEvents="none"
     className="animate-rocket"
     style={{ animationDelay: `${delay}s` }}
