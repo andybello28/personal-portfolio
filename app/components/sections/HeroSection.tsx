@@ -75,7 +75,7 @@ export const HeroSection = () => (
           style={{ animationDelay: "1.8s" }}
           display={{ base: "none", md: "block" }}
         >
-          Albanian-American software engineer from Boston, MA aspiring to learn new technologies and make an impact.
+          Albanian-American software engineer from Boston, MA building scalable full-stack applications.
         </Text>
       </VStack>
 

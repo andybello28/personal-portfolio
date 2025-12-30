@@ -17,7 +17,7 @@ export const AboutSection = () => (
         About Me
       </Heading>
       <Text fontSize={{ base: "md", lg: "lg" }} color="gray.600" textAlign="center" lineHeight="tall">
-        I'm from Boston, MA and am currently a Junior at Boston College studying Computer Science and Business. I'm passionate about using technology to make people's lives easier and I'm always looking to grow as a developer.
+        I am a Junior at Boston College studying Computer Science and Business, based in Boston, MA. Passionate about using technology to make people's lives easier, I'm always looking to grow as a developer and explore new technologies.
       </Text>
       <Text fontSize={{ base: "md", lg: "lg" }} color="gray.600" textAlign="center" lineHeight="tall">
         When I'm not programming, you can find me cheering on Boston Sports, jamming on my saxophone, spending time with my family, or hiking in New Hampshire. 

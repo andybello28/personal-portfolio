@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Text, HStack, Link, Icon } from "@chakra-ui/react";
-import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
+import { LuGithub, LuLinkedin, LuFileText } from "react-icons/lu";
 
 export const Footer = () => (
   <Box position="relative">
@@ -198,7 +198,8 @@ export const Footer = () => (
         </Text>
         <HStack gap="4">
           <Link
-            href="#"
+            href="https://github.com/andybello28"
+            target="_blank"
             aria-label="GitHub"
             color="orange.200"
             _hover={{ color: "white" }}
@@ -208,7 +209,8 @@ export const Footer = () => (
             </Icon>
           </Link>
           <Link
-            href="#"
+            href="https://www.linkedin.com/in/andy-bello/"
+            target="_blank"
             aria-label="LinkedIn"
             color="orange.200"
             _hover={{ color: "white" }}
@@ -218,13 +220,14 @@ export const Footer = () => (
             </Icon>
           </Link>
           <Link
-            href="#"
-            aria-label="Email"
+            href="/Andy_Bello_Resume.pdf"
+            target="_blank"
+            aria-label="Resume"
             color="orange.200"
             _hover={{ color: "white" }}
           >
             <Icon size="sm">
-              <LuMail />
+              <LuFileText />
             </Icon>
           </Link>
         </HStack>
