@@ -1,9 +1,9 @@
 "use client";
 
-import { Box, Heading, Text, VStack, Button } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack, Link } from "@chakra-ui/react";
 
 export const ContactSection = () => (
-  <Box id="contact" py={{ base: "16", lg: "24" }} px={{ base: "4", md: "8", lg: "12" }}>
+  <Box id="contact" py={{ base: "16", lg: "24" }} px={{ base: "4", md: "8", lg: "12" }} position="relative" zIndex={1}>
     <VStack
       gap={{ base: "6", lg: "8" }}
       maxW="600px"
@@ -18,17 +18,24 @@ export const ContactSection = () => (
         Get in Touch
       </Heading>
       <Text fontSize={{ base: "md", lg: "lg" }} color="gray.600">
-        Interested in working together? Let's connect.
+        I'd love to hear about what you're building! Let's connect!
       </Text>
-      <Button
-        size={{ base: "md", lg: "lg" }}
+      <Link
+        href="mailto:andycbello@gmail.com"
+        display="inline-flex"
+        alignItems="center"
+        justifyContent="center"
+        px={{ base: "6", lg: "8" }}
+        py={{ base: "2.5", lg: "3" }}
+        fontSize={{ base: "md", lg: "lg" }}
+        fontWeight="semibold"
         bg="green.600"
         color="white"
-        _hover={{ bg: "green.500" }}
-        px={{ base: "6", lg: "8" }}
+        borderRadius="md"
+        _hover={{ bg: "green.500", textDecoration: "none" }}
       >
         Say Hello
-      </Button>
+      </Link>
     </VStack>
   </Box>
 );

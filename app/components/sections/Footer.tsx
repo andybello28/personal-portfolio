@@ -42,6 +42,104 @@ export const Footer = () => (
           />
         ))}
       </HStack>
+      {/* Apple tree */}
+      <Box position="absolute" left="12%" bottom="0" zIndex={-1}>
+        {/* Tree trunk */}
+        <Box
+          position="absolute"
+          bottom="0"
+          left="50%"
+          transform="translateX(-50%)"
+          w="20px"
+          h="80px"
+          bg="orange.900"
+          borderRadius="sm"
+        />
+        {/* Tree canopy */}
+        <Box
+          position="absolute"
+          bottom="65px"
+          left="50%"
+          transform="translateX(-50%)"
+          w="90px"
+          h="75px"
+          bg="green.600"
+          borderRadius="full"
+        />
+        <Box
+          position="absolute"
+          bottom="85px"
+          left="50%"
+          transform="translateX(-50%) translateX(-25px)"
+          w="70px"
+          h="60px"
+          bg="green.500"
+          borderRadius="full"
+        />
+        <Box
+          position="absolute"
+          bottom="85px"
+          left="50%"
+          transform="translateX(-50%) translateX(25px)"
+          w="70px"
+          h="60px"
+          bg="green.500"
+          borderRadius="full"
+        />
+        <Box
+          position="absolute"
+          bottom="110px"
+          left="50%"
+          transform="translateX(-50%)"
+          w="60px"
+          h="50px"
+          bg="green.400"
+          borderRadius="full"
+        />
+        {/* Apples on tree */}
+        <Box
+          position="absolute"
+          bottom="75px"
+          left="50%"
+          transform="translateX(-50%) translateX(-30px)"
+          w="14px"
+          h="14px"
+          bg="red.500"
+          borderRadius="full"
+        />
+        <Box
+          position="absolute"
+          bottom="100px"
+          left="50%"
+          transform="translateX(-50%) translateX(20px)"
+          w="12px"
+          h="12px"
+          bg="red.400"
+          borderRadius="full"
+        />
+        <Box
+          position="absolute"
+          bottom="90px"
+          left="50%"
+          transform="translateX(-50%) translateX(-5px)"
+          w="12px"
+          h="12px"
+          bg="red.500"
+          borderRadius="full"
+        />
+        {/* Fallen apple on ground */}
+        <Box
+          position="absolute"
+          bottom="-2px"
+          left="50%"
+          transform="translateX(-50%) translateX(40px)"
+          w="14px"
+          h="14px"
+          bg="red.500"
+          borderRadius="full"
+          boxShadow="inset -2px -2px 3px rgba(0,0,0,0.2)"
+        />
+      </Box>
     </Box>
 
     {/* Dirt layer */}

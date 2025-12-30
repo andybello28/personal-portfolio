@@ -10,10 +10,16 @@ import {
   Link,
   Icon,
   Stack,
+  Image,
 } from "@chakra-ui/react";
 import { LuGithub, LuLinkedin, LuFileText } from "react-icons/lu";
 
-const items = Array.from({ length: 5 });
+const items = [
+  { src: "/Professional.png", alt: "Professional photo" },
+  { src: "/Mom.png", alt: "With Mom" },
+  { src: "/Dad.png", alt: "With Dad" },
+  { src: "/Ski.png", alt: "Skiing" },
+]
 
 export const HeroSection = () => (
   <Stack
@@ -67,9 +73,9 @@ export const HeroSection = () => (
           textAlign={{ base: "center", lg: "left" }}
           className="animate-text"
           style={{ animationDelay: "1.8s" }}
+          display={{ base: "none", md: "block" }}
         >
-          A developer passionate about creating clean, functional, and
-          beautiful digital experiences.
+          Albanian-American software engineer from Boston, MA aspiring to learn new technologies and make an impact.
         </Text>
       </VStack>
 
@@ -211,18 +217,20 @@ export const HeroSection = () => (
       overflow="hidden"
       className="animate-text"
       style={{ animationDelay: "2.1s" }}
+      overflowY="scroll"
     >
       {/* Mac-style window header */}
-      <HStack px="4" py="3" bg="gray.100" borderBottom="1px solid" borderColor="gray.200">
+      <HStack px="4" py="3" bg="gray.100" borderBottom="1px solid" borderColor="gray.200" justify="center">
         <HStack gap="2">
           <Box w="3" h="3" borderRadius="full" bg="red.400" />
           <Box w="3" h="3" borderRadius="full" bg="yellow.400" />
           <Box w="3" h="3" borderRadius="full" bg="green.400" />
+          <Box w="3" h="3" borderRadius="full" bg="blue.400" />
         </HStack>
       </HStack>
 
       {/* Carousel content area */}
-      <Box flex="1" display="flex" flexDirection="column">
+      <Box flex="1" display="flex" flexDirection="column" px="4" pb="2">
         <Carousel.Root
           slideCount={items.length}
           h="100%"
@@ -231,27 +239,21 @@ export const HeroSection = () => (
           autoplay={{ delay: 3500 }}
         >
           <Carousel.ItemGroup flex="1">
-            {items.map((_, index) => (
+            {items.map((item, index) => (
               <Carousel.Item key={index} index={index}>
-                <Box
+                <Image
+                  src={item.src}
+                  alt={item.alt}
                   w="100%"
                   h="100%"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  fontSize="2.5rem"
-                >
-                  {index + 1}
-                </Box>
+                  objectFit="cover"
+                />
               </Carousel.Item>
             ))}
           </Carousel.ItemGroup>
 
-          <Carousel.Control justifyContent="center" py="4">
-            <Carousel.Indicators
-              bg="black"
-              _current={{ bg: "blue.500" }}
-            />
+          <Carousel.Control justifyContent="center" pb="6" gap="4">
+            <Carousel.Indicators _current={{ bg: "blue.500" }} />
           </Carousel.Control>
         </Carousel.Root>
       </Box>
